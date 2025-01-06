@@ -1,0 +1,114 @@
+﻿/* General Button Styling for Consistency */
+.actions button, .add-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Positioning the Add New Product button to the top-right */
+.add-btn {
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #4caf50, #2e7d32);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Absolute positioning */
+    top: 65px; /* Adjust the space from the top */
+    right: 20px; /* Adjust the space from the right */
+    z-index: 100; /* Ensure the button stays on top */
+}
+
+    .add-btn:hover {
+        background: linear-gradient(90deg, #43a047, #1b5e20);
+        transform: scale(1.05);
+    }
+
+/* Edit Button */
+.actions .edit-btn {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+}
+
+    .actions .edit-btn:hover {
+        background: linear-gradient(90deg, #5e0acc, #1b6aff);
+        transform: scale(1.03);
+    }
+
+/* Update Button */
+.actions .update-btn {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+}
+
+    .actions .update-btn:hover {
+        background: linear-gradient(90deg, #009efd, #0060ff);
+        transform: scale(1.03);
+    }
+
+/* Delete Button */
+.actions .delete-btn {
+    background: linear-gradient(90deg, #f12711, #f5af19);
+}
+
+    .actions .delete-btn:hover {
+        background: linear-gradient(90deg, #d7263d, #ec7d10);
+        transform: scale(1.03);
+    }
+
+/* Product Card Layout */
+.product-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    width: 80%; /* Adjust width (80% of the container, you can change to a specific px value like 600px if you prefer) */
+    margin: 15px auto; /* Centers the product card horizontally and adds space above and below */
+    max-width: 900px; /* Optional: maximum width if you want to avoid the card becoming too wide on large screens */
+}
+
+
+    .product-card img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+.product-info {
+    flex: 1;
+    margin-left: 10px;
+}
+
+    .product-info h2 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .product-info p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}

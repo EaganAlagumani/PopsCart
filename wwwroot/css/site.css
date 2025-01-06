@@ -1,0 +1,304 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.top-right {
+    position: absolute; /* Position the image absolutely */
+    top: 20px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.image-size {
+    width: 30px; /* Set width */
+    height: 30px; /* Set height */
+    object-fit: cover; /* Crop the image if necessary */
+}
+
+/* Container for the buttons */
+.top-right-container {
+    position: fixed; /* Keeps buttons fixed in the top-right corner */
+    top: 10px; /* Adjust vertical distance from the top */
+    right: 10px; /* Adjust horizontal distance from the right */
+    display: flex; /* Align buttons horizontally */
+    gap: 10px; /* Adds spacing between the buttons */
+    z-index: 1000; /* Ensures buttons are above other elements */
+}
+
+/* Common button styles */
+.btn-custom {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 50px; /* Adjust width */
+    height: 50px; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common image styles */
+.image-size {
+    width: 40px; /* Adjust image width */
+    height: 40px; /* Adjust image height */
+}
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    height:80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fixed container for buttons */
+.fixed-buttons-container {
+    position: absolute; /* Keeps buttons fixed regardless of layout movement */
+    top: 0px; /* Vertical distance from the top of the viewport */
+    right: 10px; /* Horizontal distance from the right of the viewport */
+    display: flex; /* Align buttons horizontally */
+    gap: 10px; /* Spacing between buttons */
+    z-index: 1000; /* Ensures the buttons are on top of other elements */
+}
+
+/* Common button styles */
+.btn-custom {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 50px; /* Adjust button width */
+    height: 50px; /* Adjust button height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Common image styles */
+.image-size {
+    width: 40px; /* Adjust image width */
+    height: 40px; /* Adjust image height */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Dropdown Container */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button */
+.dropdown-button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .dropdown-button:hover {
+        background-color: transparent;
+    }
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 4px;
+    width: 150px;
+}
+
+    .dropdown-menu li {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+        .dropdown-menu li:hover {
+            background-color: #f0f0f0;
+        }
+.unstyled-button {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure the page takes the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Use Flexbox for body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body fills the screen */
+}
+
+/* Main section that will take remaining space */
+.layout-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add padding or margin as needed */
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Simple Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+    .footer .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+.footer-links {
+    margin-bottom: 15px;
+}
+
+    .footer-links a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+.footer-bottom {
+    font-size: 12px;
+    color: #bbb;
+}
+
+
+
+.navbar-nav .nav-item {
+   
+}
+
+    .navbar-nav .nav-item a.nav-link {
+        color: #333; /* Text color */
+        text-decoration: none; /* Remove underline */
+        top:20px;
+    }
+
+        .navbar-nav .nav-item a.nav-link:hover {
+            color: #007bff; /* Change color on hover */
+            text-decoration: underline; /* Optional: Add underline on hover */
+        }
+
+
+
+
+
+
+/* General body and layout styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    display: flex;
+    flex-direction: column; /* Enable column layout for header, main content, and footer */
+}
+
+/* Main content */
+.main-content {
+    flex: 1; /* Allows the content to expand and push the footer down */
+}
+
+/* Footer styles */
+footer {
+    background-color: #f0f0f0; /* Dark background */
+    color: #fff; /* Light text color */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+}
+
+    footer a {
+        color: #007bff; /* Link color */
+        text-decoration: none;
+        margin: 0 10px;
+        transition: color 0.3s;
+    }
+
+        footer a:hover {
+            color: #ff5722; /* Change link color on hover */
+        }
+

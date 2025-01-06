@@ -1,0 +1,441 @@
+﻿* 
+
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.layout-tabs {
+    background-color: white; /* Ensures tabs have a different background */
+    padding: 10px; /* Add padding for separation */
+    border-radius: 5px; /* Optional: Rounded corners for tabs */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
+}
+
+/* Slider container */
+.slider-container {
+    width: 80%;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto; /* Centers the slider */
+    position: relative; /* Contain slider within this div */
+}
+
+/* Inner slider wrapper */
+.slider {
+    display: flex;
+    transition: transform 1s ease;
+    width: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+/* Text at the base of each banner */
+.text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+h1 {
+    margin-bottom: 20px;
+    text-align:center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns, responsive */
+    gap: 20px;
+    width: 25%;
+    max-width: 800px;
+    margin: auto;
+    position: absolute;
+    justify-content: center;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    background-color: #fff;
+    justify-content:center;
+    align-items:center;
+    width:220%;
+    gap:15px
+    }
+
+    .product-card:hover {
+        transform: scale(1.05); /* Slightly enlarges the card on hover */
+    }
+
+.product-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+    .product-info h2 {
+        font-size: 1.2em;
+        margin: 10px 0 5px;
+    }
+
+    .product-info p {
+        font-size: 1em;
+        color: #333;
+    }
+ .add-to-cart-btn {
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+/* Main container for all products */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Increased gap between products */
+    padding: 16px;
+    justify-items: center;
+    box-sizing: border-box; /* Prevents overflow by including padding in the element's total width/height */
+}
+
+/* Individual product card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    max-width: 100%; /* Prevents the card from stretching too far */
+    box-sizing: border-box;
+}
+
+/* Product image section */
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+
+}
+
+    .product-image img {
+        width: 100%;
+        object-fit: contain; /* Ensures the whole image is visible */
+    }
+
+    /* Quick view button on hover */
+    /*.product-image:hover .quick-view {
+        opacity: 1;
+    }*/
+
+.quick-view {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Product info section */
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Product title and brand */
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-brand {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Price section */
+.product-price .price {
+    color: #ff5722;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product-price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+}
+
+/* Product rating */
+.product-rating {
+    margin: 10px 0;
+}
+
+.stars {
+    color: #ff9800;
+}
+
+.reviews {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Add to cart button */
+.add-to-cart {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .add-to-cart:hover {
+        background-color: #e64a19;
+    }
+
+/* Hover effect for product card */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensure content doesn't overflow */
+.product-info {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+/* Container for centering and styling the search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Styling the search input */
+.search-bar {
+    width: 450px;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    /* Add focus effect */
+    .search-bar:focus {
+        border-color: #007bff;
+        box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    }
+
+/* Style for the search button */
+.search-button {
+    margin-left: -89px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+    .search-button:hover {
+        background-color: #0056b3;
+    }
+
+
+
+
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background for visibility */
+    border-radius: 50%; /* Round buttons */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: white; /* White icon color */
+    border-radius: 50%; /* Round icons */
+}
+
+/* Change button color on hover */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+    background-color: #FAE5B8;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    height: auto;
+}
+
+/* Individual item in the navbar */
+.nav-item {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+    .nav-item:hover {
+        color: #007bff;
+    }
+
+    /* Icon styles */
+    .nav-item img {
+        width: 60px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Text styles below the icons */
+    .nav-item span {
+        display: block;
+        margin-top: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        /* Prevent wrapping */
+        white-space: nowrap;
+        /* Allow full text to extend */
+        overflow: visible;
+        text-overflow: unset;
+    }
+
+    /* Arrow for dropdown indicator */
+    .nav-item .dropdown-arrow {
+        font-size: 10px;
+        margin-left: 4px;
+    }
+
+/* Dropdown content styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 80px; /* Adjust this to position the dropdown */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown menu links */
+.dropdown-content a {
+    color: #333;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+}
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+.transparent-container {
+    background-color: transparent;
+}
